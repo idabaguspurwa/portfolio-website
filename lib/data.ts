@@ -5,6 +5,7 @@ import { LuGraduationCap } from "react-icons/lu";
 import mtgraphy from "@/public/mtgraphy.png";
 import portfolioImg from "@/public/portfolioimg.png";
 import fakenewsdetectionImg from "@/public/fakenewsDetection.png";
+import viewContractor from "@/public/viewContractor.png";
 
 export const links = [
   {
@@ -87,6 +88,13 @@ export const projectsData = [
       "Fake News Detection using ML technique like Bert, TF-IDF, and GLOVE.",
     tags: ["Machine Learning", "TF-IDF", "Bert", "GLOVE", "NLP"],
     imageUrl: fakenewsdetectionImg,
+  },
+  {
+    title: "Contractor Website UI/UX",
+    description:
+      "A Software Engineering projects, and our team take on that is to make a Website that help user find a contractor. (This is only the prototype)",
+    tags: ["UI/UX", "Figma"],
+    imageUrl: viewContractor,
   },
 ] as const;
 
