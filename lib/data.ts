@@ -6,6 +6,7 @@ import mtgraphy from "@/public/mtgraphy.png";
 import portfolioImg from "@/public/portfolioimg.png";
 import fakenewsdetectionImg from "@/public/fakenewsDetection.png";
 import viewContractor from "@/public/viewContractor.png";
+import portfolio3d from "@/public/3dportfolio.png";
 
 export const links = [
   {
@@ -95,6 +96,13 @@ export const projectsData = [
       "A Software Engineering projects, and our team take on that is to make a Website that help user find a contractor. (This is only the prototype)",
     tags: ["UI/UX", "Figma"],
     imageUrl: viewContractor,
+  },
+  {
+    title: "3d Portfolio Website",
+    description:
+      "This is a 3d Portfolio Website that i made using ReactJs + Vite",
+    tags: ["Vite", "React", "TailwindCSS"],
+    imageUrl: portfolio3d,
   },
 ] as const;
 
