@@ -26,6 +26,10 @@ export const links = [
     hash: "#skills",
   },
   {
+    name: "Publications",
+    hash: "#publications",
+  },
+  {
     name: "Experience",
     hash: "#experience",
   },
@@ -64,7 +68,15 @@ export const experiencesData = [
     description:
       "Part of a team that is responsible for managing an internal activity for the members to connect with each others.",
     icon: React.createElement(CgWorkAlt),
-    date: "Mar 2022 - Present",
+    date: "Mar 2022 - Jan 2024",
+  },
+  {
+    title: "Business Analyst Intern",
+    location: "PT Bank Central Asia Tbk",
+    description:
+      "Analyzed business requirements through stakeholder interviews to optimize operational processes and decision-making.",
+    icon: React.createElement(CgWorkAlt),
+    date: "Feb 2024 - Feb 2025",
   },
 ] as const;
 
@@ -122,4 +134,15 @@ export const skillsData = [
   "SQL",
   "Critical Thinking",
   "Communication",
+] as const;
+
+export const publicationsData = [
+  {
+    title: "Predicting Anger Proneness Using Deep Learning Techniques",
+    authors: "Ida Bagus G. P. M. Adiputra, et al.",
+    journal: "2023 IEEE 9th International Conference on Computing, Engineering and Design (ICCED)",
+    abstract: "This research explores the application of machine learning algorithms to predict anger proneness in individuals based on physiological and behavioral data, contributing to mental health monitoring and intervention strategies.",
+    tags: ["Machine Learning", "NLP", "Mental Health", "Predictive Analysis"],
+    url: "https://ieeexplore.ieee.org/document/10425252"
+  }
 ] as const;

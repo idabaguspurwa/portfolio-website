@@ -19,18 +19,18 @@ export default function About() {
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
-        I'm an undergraduate{" "}
-        <span className="font-medium">Binus University</span> student majoring
-        in Computer Science,{" "}
-        <span className="font-medium">specializing in Intelligent System</span>.{" "}
-        <span className="italic">I have a strong interest</span> in Deep
-        Learning, NLP, and{" "}
-        <span className="underline">Mobile/App Development</span>. I have a
-        strong commitment and communication skills for a{" "}
-        <span className="font-medium">team-based project</span>. I'm eager to
-        learn new technologies and many things. I am currently learning more
-        about <span className="font-medium">Application Developer</span>{" "}
-        specifically and are trying to improve my skills.
+        A final-year{" "}
+        <span className="font-medium">Computer Science</span> student
+        specializing in{" "}
+        <span className="font-medium">Intelligent Systems</span>, I am
+        passionate about leveraging technology to solve complex problems. With
+        strong skills in{" "}
+        <span className="italic">deep learning, NLP, and mobile app development</span>,
+        I have practical experience from internships and academic projects like the{" "}
+        <span className="underline">Anger Proneness Prediction Research</span>. Proficient in{" "}
+        <span className="font-medium">Python, TensorFlow</span>, and multiple programming languages,
+        I excel in collaborative environments and am committed to{" "}
+        <span className="font-medium">continuous learning</span> and technological innovation.
       </p>
     </motion.section>
   );
