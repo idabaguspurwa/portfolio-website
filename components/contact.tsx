@@ -1,15 +1,21 @@
 "use client";
 
-import React from "react";
+import React, { useState, useRef } from "react";
 import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
 import { sendEmail } from "@/actions/sendEmail";
-import SubmitBtn from "./submit-btn";
+import SubmitBtn, { SubmitButtonRef } from "./submit-btn";
 import toast from "react-hot-toast";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
+  const [formData, setFormData] = useState({
+    senderEmail: "",
+    message: ""
+  });
+  const [isPending, startTransition] = React.useTransition();
+  const submitBtnRef = useRef<SubmitButtonRef>(null);
 
   return (
     <motion.section
@@ -39,33 +45,92 @@ export default function Contact() {
       </p>
       <form
         className="mt-10 flex flex-col dark:text-black"
-        action={async (formData) => {
-          const { data, error } = await sendEmail(formData);
+        onSubmit={async (e) => {
+          e.preventDefault();
+          const formElement = e.target as HTMLFormElement;
+          const formData = new FormData(formElement);
 
-          if (error) {
-            toast.error(error);
-            return;
-          }
+          startTransition(async () => {
+            const { data, error } = await sendEmail(formData);
 
-          toast.success("Email sent successfully!");
+            if (error) {
+              toast.error(error);
+              return;
+            }
+
+            // Show success notification
+            toast.success("Email sent successfully!", {
+              duration: 3000,
+              position: "top-center",
+              style: {
+                background: '#10B981',
+                color: '#fff'
+              },
+              icon: '✉️'
+            });
+
+            // Trigger success state in button
+            if (submitBtnRef.current) {
+              submitBtnRef.current.setShowSuccess(true);
+            }
+
+            // Reset form
+            setFormData({ senderEmail: "", message: "" });
+          });
         }}
       >
-        <input
-          className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
-          name="senderEmail"
-          type="email"
-          required
-          maxLength={500}
-          placeholder="Your email"
-        />
-        <textarea
-          className="h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
-          name="message"
-          required
-          maxLength={500}
-          placeholder="Your message"
-        />
-        <SubmitBtn />
+        <div className="relative">
+          <input
+            className="peer h-14 w-full px-6 rounded-xl bg-gray-100 dark:bg-white dark:bg-opacity-80 
+                     shadow-sm transition-all duration-300
+                     dark:focus:bg-opacity-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50
+                     dark:shadow-[0_0_15px_rgba(255,255,255,0.05)]
+                     disabled:opacity-50"
+            name="senderEmail"
+            type="email"
+            required
+            maxLength={500}
+            value={formData.senderEmail}
+            onChange={(e) => setFormData(prev => ({ ...prev, senderEmail: e.target.value }))}
+            placeholder=" "
+            disabled={isPending}
+          />
+          <label
+            className="absolute left-6 -top-2 text-sm text-gray-600 dark:text-white/80
+                     transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base
+                     peer-focus:-top-2 peer-focus:text-sm peer-focus:text-blue-500"
+          >
+            Your Email
+          </label>
+        </div>
+        
+        <div className="relative mt-6">
+          <textarea
+            className="peer h-52 w-full rounded-xl bg-gray-100 dark:bg-white dark:bg-opacity-80 p-6
+                     shadow-sm transition-all duration-300
+                     dark:focus:bg-opacity-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50
+                     dark:shadow-[0_0_15px_rgba(255,255,255,0.05)]
+                     disabled:opacity-50"
+            name="message"
+            required
+            maxLength={5000}
+            value={formData.message}
+            onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
+            placeholder=" "
+            disabled={isPending}
+          />
+          <label
+            className="absolute left-6 -top-2 text-sm text-gray-600 dark:text-white/80
+                     transition-all peer-placeholder-shown:top-6 peer-placeholder-shown:text-base
+                     peer-focus:-top-2 peer-focus:text-sm peer-focus:text-blue-500"
+          >
+            Your Message
+          </label>
+        </div>
+
+        <div className="mt-6">
+          <SubmitBtn ref={submitBtnRef} />
+        </div>
       </form>
     </motion.section>
   );

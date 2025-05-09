@@ -104,7 +104,7 @@ export const projectsData = [
     imageUrl: portfolio3d,
     githubUrl: "https://github.com/idabaguspurwa/3d-portfolio",
     liveUrl: "https://idabaguspurwa3d-portfolio.vercel.app/",
-    detailedDescription: "This portfolio combines React components with Vite's build system to create an immersive 3D experience. Dynamic models and animations respond to user interaction, enhancing project showcase effectiveness. TailwindCSS enables responsive design with minimal code, ensuring optimal viewing across devices while maintaining performance despite complex visual elements."
+    detailedDescription: "This portfolio combines React components with Vite's build system to create an immersive 3D experience. Dynamic models and animations respond to user interaction, enhancing project showcase effectiveness. TailwindCSS enables responsive design with minimal code, ensuring optimal viewing across devices while maintaining performance despite complex 3D elements."
   },
   {
     title: "Beritau - Mobile News Application",
@@ -128,7 +128,7 @@ export const projectsData = [
   {
     title: "Email Cleanup Automation Tool",
     description:
-      "Web Automation tool that deletes unread emails from a user's inbox. It uses Selenium to automate the deletion process and TestNG to run the automation.",
+      "Web automation tool that uses Selenium and TestNG to delete unread emails from a user's inbox.",
     tags: ["Java", "Selenium", "Web Automation", "TestNG"],
     imageUrl: maildeletion,
     githubUrl: "https://github.com/idabaguspurwa/MailDeletion",
