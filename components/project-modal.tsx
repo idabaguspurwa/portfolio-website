@@ -78,13 +78,13 @@ export default function ProjectModal({
     >
       <motion.div
         ref={modalRef}
-        className="bg-white dark:bg-gray-900 rounded-xl w-full max-w-3xl overflow-hidden"
+        className="bg-white dark:bg-gray-900 rounded-xl w-full max-w-3xl overflow-hidden max-h-[90vh] flex flex-col"
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.9 }}
         transition={{ type: "spring", damping: 15 }}
       >
-        <div className="relative">
+        <div className="relative flex-shrink-0">
           <div className="relative h-[350px] w-full flex items-center justify-center bg-gray-50 dark:bg-gray-800/50">
             <div className="relative h-full max-w-[600px] w-full">
               <Image
@@ -106,7 +106,7 @@ export default function ProjectModal({
           </button>
         </div>
 
-        <div className="p-6 space-y-4">
+        <div className="p-6 space-y-4 overflow-y-auto">
           <h2 id="modal-title" className="text-2xl font-bold">{project.title}</h2>
           
           <div>
