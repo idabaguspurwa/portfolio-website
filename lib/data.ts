@@ -7,6 +7,8 @@ import portfolioImg from "@/public/portfolioimg.png";
 import fakenewsdetectionImg from "@/public/fakenewsDetection.png";
 import viewContractor from "@/public/viewContractor.png";
 import portfolio3d from "@/public/3dportfolio.png";
+import beritau from "@/public/beritau_mobile.png";
+import maildeletion from "@/public/mail_deletion.jpg"
 
 export const links = [
   {
@@ -80,41 +82,84 @@ export const experiencesData = [
   },
 ] as const;
 
+export type Project = {
+  title: string;
+  description: string;
+  tags: readonly string[];
+  imageUrl: any;
+  githubUrl?: string;
+  liveUrl?: string;
+  figmaUrl?: string;
+  detailedDescription: string;
+};
+
 export const projectsData = [
   {
     title: "MtGraphy Photography Website",
     description:
-      "This is a HCI projects to make a photography website, and this is my take on that.",
+      "A photography platform built as a college HCI project, focusing on user-centered design and intuitive navigation to showcase professional photography site",
     tags: ["HTML", "CSS", "JavaScript", "Bootstrap"],
     imageUrl: mtgraphy,
+    githubUrl: "https://github.com/idabaguspurwa/mtgraphy",
+    liveUrl: "https://mtgraphy-navy.vercel.app/",
+    detailedDescription: "MTgraphy demonstrates practical application of HCI concepts through a visually engaging platform for photography services. The project implements responsive design, accessibility features, and streamlined navigation to enhance user experience. Key elements include image-centric layouts, minimal cognitive load, and clear visual hierarchy. Created using modern frontend technologies, this academic project balances aesthetic appeal with functional usability to serve both photography enthusiasts and potential clients."
   },
   {
-    title: "Portfolio Website",
+    title: "Vanilla Portfolio Website",
     description:
-      "This is a portfolio website that i make using vanilla CSS, HTML, and JavaScript file.",
+      "A clean, minimalist portfolio website built with vanilla web technologies to showcase professional skills and projects in frontend development.",
     tags: ["HTML", "CSS", "JavaScript"],
     imageUrl: portfolioImg,
+    githubUrl: "https://github.com/idabaguspurwa/vanilla-portfolio?tab=readme-ov-file",
+    liveUrl: "https://vanilla-portfolio-mu.vercel.app/",
+    detailedDescription: "A minimalist portfolio website built with vanilla HTML, CSS, and JavaScript. Features responsive design, intuitive navigation, and optimized performance without frameworks. Includes downloadable CV functionality and social media integration while showcasing core web development skills through clean, efficient code and thoughtful user experience design."
   },
   {
     title: "Fake News Detection Paper using Machine Learning Technique",
     description:
-      "Fake News Detection using ML technique like Bert, TF-IDF, and GLOVE.",
+      "Research paper comparing BERT, TF-IDF, and GloVe embeddings with different ML models using advanced NLP techniques.",
     tags: ["Machine Learning", "TF-IDF", "Bert", "GLOVE", "NLP"],
     imageUrl: fakenewsdetectionImg,
+    githubUrl: "https://github.com/idabaguspurwa/fakeNewsDetection-ML",
+    detailedDescription: "This research evaluates fake news detection by comparing BERT, TF-IDF, and GloVe embeddings with various machine learning models. Through systematic analysis, the study identifies optimal combinations for detecting misinformation, revealing BERT's superior contextual understanding while highlighting efficiency trade-offs with traditional approaches. The findings contribute practical insights for developing more effective automated detection systems."
   },
   {
     title: "Contractor Website UI/UX",
     description:
-      "A Software Engineering projects, and our team take on that is to make a Website that help user find a contractor. (This is only the prototype)",
+      "A contractor platform developed as our SE project. This marketplace combines social and professional features.",
     tags: ["UI/UX", "Figma"],
     imageUrl: viewContractor,
+    figmaUrl: "https://www.figma.com/design/sbIo50vnABJ3KFq8LSRJVY/Web-Kontraktor?node-id=0-1&p=f&t=JN4UDOe9oeQreYnw-0",
+    detailedDescription: "UI/UX design for a contractor marketplace connecting homeowners with qualified professionals. Created comprehensive user flows, wireframes, and high-fidelity Figma prototypes that prioritize intuitive navigation, clear service categories, and trust-building elements to streamline the contractor discovery process."
   },
   {
-    title: "3d Portfolio Website",
+    title: "3D Portfolio Website",
     description:
-      "This is a 3d Portfolio Website that i made using ReactJs + Vite",
+      "A modern portfolio showcasing work through interactive 3D elements and animations. Built with React, Vite, and TailwindCSS to deliver a visually impressive experience across devices.",
     tags: ["Vite", "React", "TailwindCSS"],
     imageUrl: portfolio3d,
+    githubUrl: "https://github.com/idabaguspurwa/3d-portfolio",
+    liveUrl: "https://idabagus-3d-portfolio.vercel.app",
+    detailedDescription: "This portfolio combines React components with Vite's build system to create an immersive 3D experience. Dynamic models and animations respond to user interaction, enhancing project showcase effectiveness. TailwindCSS enables responsive design with minimal code, ensuring optimal viewing across devices while maintaining performance despite complex visual elements."
+  },
+  {
+    title: "Beritau - Mobile News Application",
+    description:
+      "Beritau offers Indonesian users a streamlined news experience from diverse sources. The app functions like Line Today, Detik, and Kompas.",
+    tags: ["Java", "Mobile Programming"],
+    imageUrl: beritau,
+    githubUrl: "https://github.com/chelluu/MobProg_Final",
+    figmaUrl: "https://www.figma.com/design/MRtoDlIUiQYvvvEDerE7UF/Mob-Prog-Anjay?node-id=0-1&p=f&t=ccUXWxCLTndrB5c6-0",
+    detailedDescription: "Beritau features a clean, user-friendly design with simple authentication. It aggregates content from various Indonesian news outlets in an organized format, helping users stay informed without navigating multiple sites. The intuitive interface includes clear login options and a distinctive book icon, providing a convenient one-stop news solution for the Indonesian market."
+  },
+  {
+    title: "Email Cleanup Automation Tool",
+    description:
+      "Web Automation tool that deletes unread emails from a user's inbox. It uses Selenium to automate the deletion process and TestNG to run the automation.",
+    tags: ["Java", "Selenium", "Web Automation", "TestNG"],
+    imageUrl: maildeletion,
+    githubUrl: "https://github.com/idabaguspurwa/MailDeletion",
+    detailedDescription: "This web automation tool efficiently cleans inboxes by automatically identifying and deleting unread emails through Selenium WebDriver. TestNG integration ensures reliable execution with comprehensive reporting capabilities. The application handles authentication, targeted filtering, and confirmation processes to deliver a practical solution for email management challenges."
   },
 ] as const;
 
