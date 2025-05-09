@@ -148,7 +148,7 @@ export default function ProjectModal({
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition"
               >
-                <TbWorld /> Live Site
+                <TbWorld /> Website
               </a>
             )}
             {project.figmaUrl && (
