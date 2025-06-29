@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import React from "react";
-import logo from "@/public/logo.jpeg";
+import logo from "@/public/logo.jpg";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsLinkedin } from "react-icons/bs";
@@ -35,7 +35,7 @@ export default function Intro() {
               height="192"
               quality="95"
               priority={true}
-              className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-x1"
+              className="h-24 w-24 rounded-full object-cover object-top border-[0.35rem] border-white shadow-x1"
             />
           </motion.div>
           <motion.span
@@ -60,10 +60,10 @@ export default function Intro() {
         animate={{ opacity: 1, y: 0 }}
       >
         <span className="font-bold">Hello, I'm Ida Bagus,</span>{" "}
-        <span className="font-bold">a Computer Science student</span> specializing in{" "}
-        <span className="font-bold">Intelligent Systems</span>. Passionate about{" "}
-        <span className="italic">Deep Learning, NLP, and Mobile Development</span>. Welcome to My{" "}
-        <span className="italic">Portfolio</span>.
+        <span className="font-bold">a Data Engineer & Analytics Professional</span> specializing in{" "}
+        <span className="font-bold">Cloud Data Platforms</span>. Expert in{" "}
+        <span className="italic">Data Engineering, Business Intelligence, and Machine Learning</span>. Welcome to my{" "}
+        <span className="italic">Data-Driven Portfolio</span>.
       </motion.h1>
 
       <motion.div
@@ -92,7 +92,7 @@ export default function Intro() {
         </a>
         <a
           className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://www.linkedin.com/in/ida-bagus-gede-purwa-manik-adiputra-0509861b8/"
+          href="https://www.linkedin.com/in/idabaguspurwa/"
           target="_blank"
         >
           <BsLinkedin />

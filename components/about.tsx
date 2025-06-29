@@ -19,18 +19,36 @@ export default function About() {
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
-        A final-year{" "}
-        <span className="font-medium">Computer Science</span> student
-        specializing in{" "}
-        <span className="font-medium">Intelligent Systems</span>, I am
-        passionate about leveraging technology to solve complex problems. With
-        strong skills in{" "}
-        <span className="italic">deep learning, NLP, and mobile app development</span>,
-        I have practical experience from internships and academic projects like the{" "}
-        <span className="underline">Anger Proneness Prediction Research</span>. Proficient in{" "}
-        <span className="font-medium">Python, TensorFlow</span>, and multiple programming languages,
-        I excel in collaborative environments and am committed to{" "}
-        <span className="font-medium">continuous learning</span> and technological innovation.
+        As a{" "}
+        <span className="font-medium">Data Engineer and Analytics Professional</span> with
+        expertise in{" "}
+        <span className="font-medium">cloud data platforms</span>, I specialize in
+        building enterprise-grade data solutions that transform raw data into actionable business insights. With hands-on experience in{" "}
+        <span className="italic">GCP, Azure, Apache Airflow, and dbt</span>,
+        I design and implement{" "}
+        <span className="underline">end-to-end data pipelines</span> following modern data engineering best practices.
+      </p>
+      
+      <p className="mb-3">
+        My expertise spans{" "}
+        <span className="font-medium">Data Engineering, Business Intelligence, and Machine Learning</span>.
+        I've successfully delivered{" "}
+        <span className="italic">real-time analytics platforms, automated ETL workflows, and ML-powered solutions</span>{" "}
+        using technologies like{" "}
+        <span className="font-medium">BigQuery, Databricks, Power BI, and Apache Spark</span>.
+        From medallion architecture implementations to production-grade data quality frameworks,
+        I bring both technical depth and business acumen to every project.
+      </p>
+      
+      <p>
+        Currently pursuing{" "}
+        <span className="font-medium">Computer Science with Intelligent Systems specialization</span>,
+        I combine academic rigor with practical industry experience from my{" "}
+        <span className="underline">Business Analyst internship at PT Bank Central Asia</span>.
+        I'm passionate about{" "}
+        <span className="font-medium">continuous learning</span> and staying at the forefront of
+        data engineering innovations, always seeking to deliver scalable, reliable solutions
+        that drive business value.
       </p>
     </motion.section>
   );

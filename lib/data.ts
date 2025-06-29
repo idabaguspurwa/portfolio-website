@@ -10,7 +10,11 @@ import fakenewsdetectionImg from "@/public/fakenewsDetection.png";
 import viewContractor from "@/public/viewContractor.png";
 import portfolio3d from "@/public/3dportfolio.png";
 import beritau from "@/public/beritau_mobile.png";
-import maildeletion from "@/public/mail_deletion.jpg"
+import maildeletion from "@/public/mail_deletion.jpg";
+import dataplatform from "@/public/dataplatform.png";
+import stockmarket from "@/public/stockmarket.png";
+import f1analytics from "@/public/f1analytics.png";
+import nyctaxi from "@/public/nyctaxi.png";
 
 export const links = [
   {
@@ -93,6 +97,7 @@ export type Project = {
   liveUrl?: string;
   figmaUrl?: string;
   detailedDescription: string;
+  category: string;
 };
 
 export const projectsData = [
@@ -104,7 +109,8 @@ export const projectsData = [
     imageUrl: portfolio3d,
     githubUrl: "https://github.com/idabaguspurwa/3d-portfolio",
     liveUrl: "https://idabaguspurwa3d-portfolio.vercel.app/",
-    detailedDescription: "This portfolio combines React components with Vite's build system to create an immersive 3D experience. Dynamic models and animations respond to user interaction, enhancing project showcase effectiveness. TailwindCSS enables responsive design with minimal code, ensuring optimal viewing across devices while maintaining performance despite complex 3D elements."
+    detailedDescription: "This portfolio combines React components with Vite's build system to create an immersive 3D experience. Dynamic models and animations respond to user interaction, enhancing project showcase effectiveness. TailwindCSS enables responsive design with minimal code, ensuring optimal viewing across devices while maintaining performance despite complex 3D elements.",
+    category: "Web Development"
   },
   {
     title: "Beritau - Mobile News Application",
@@ -114,7 +120,8 @@ export const projectsData = [
     imageUrl: beritau,
     githubUrl: "https://github.com/chelluu/MobProg_Final",
     figmaUrl: "https://www.figma.com/design/MRtoDlIUiQYvvvEDerE7UF/Mob-Prog-Anjay?node-id=0-1&p=f&t=ccUXWxCLTndrB5c6-0",
-    detailedDescription: "Beritau features a clean, user-friendly design with simple authentication. It aggregates content from various Indonesian news outlets in an organized format, helping users stay informed without navigating multiple sites. The intuitive interface includes clear login options and a distinctive book icon, providing a convenient one-stop news solution for the Indonesian market."
+    detailedDescription: "Beritau features a clean, user-friendly design with simple authentication. It aggregates content from various Indonesian news outlets in an organized format, helping users stay informed without navigating multiple sites. The intuitive interface includes clear login options and a distinctive book icon, providing a convenient one-stop news solution for the Indonesian market.",
+    category: "Mobile Development"
   },
   {
     title: "Contractor Website UI/UX",
@@ -123,7 +130,8 @@ export const projectsData = [
     tags: ["UI/UX", "Figma"],
     imageUrl: viewContractor,
     figmaUrl: "https://www.figma.com/design/sbIo50vnABJ3KFq8LSRJVY/Web-Kontraktor?node-id=0-1&p=f&t=JN4UDOe9oeQreYnw-0",
-    detailedDescription: "UI/UX design for a contractor marketplace connecting homeowners with qualified professionals. Created comprehensive user flows, wireframes, and high-fidelity Figma prototypes that prioritize intuitive navigation, clear service categories, and trust-building elements to streamline the contractor discovery process."
+    detailedDescription: "UI/UX design for a contractor marketplace connecting homeowners with qualified professionals. Created comprehensive user flows, wireframes, and high-fidelity Figma prototypes that prioritize intuitive navigation, clear service categories, and trust-building elements to streamline the contractor discovery process.",
+    category: "UI/UX Design"
   },
   {
     title: "Email Cleanup Automation Tool",
@@ -132,7 +140,29 @@ export const projectsData = [
     tags: ["Java", "Selenium", "Web Automation", "TestNG"],
     imageUrl: maildeletion,
     githubUrl: "https://github.com/idabaguspurwa/MailDeletion",
-    detailedDescription: "This web automation tool efficiently cleans inboxes by automatically identifying and deleting unread emails through Selenium WebDriver. TestNG integration ensures reliable execution with comprehensive reporting capabilities. The application handles authentication, targeted filtering, and confirmation processes to deliver a practical solution for email management challenges."
+    detailedDescription: "This web automation tool efficiently cleans inboxes by automatically identifying and deleting unread emails through Selenium WebDriver. TestNG integration ensures reliable execution with comprehensive reporting capabilities. The application handles authentication, targeted filtering, and confirmation processes to deliver a practical solution for email management challenges.",
+    category: "Automation"
+  },
+  {
+    title: "Enterprise-Grade Sales & Marketing Data Platform",
+    description:
+      "GCP based e-commerce analytics platform with automated ELT pipelines and real-time dashboards",
+    tags: ["GCP", "BigQuery", "Airflow", "dbt", "Terraform", "Python", "SQL", "Looker Studio"],
+    imageUrl: dataplatform,
+    githubUrl: "https://github.com/idabaguspurwa/Enterprise-Grade-Sales-and-Marketing-Data-Platform",
+    liveUrl: "https://lookerstudio.google.com/reporting/cb541980-d4a0-41bd-97f1-68cc0adecafe",
+    detailedDescription: "This enterprise-grade data platform demonstrates complete automation from raw e-commerce data ingestion to business-ready analytics. Built on Google Cloud Platform, it orchestrates ELT workflows using Cloud Composer (Airflow), transforms data with dbt following medallion architecture patterns, and delivers insights through interactive Looker Studio dashboards. Key achievements include Infrastructure as Code with Terraform, comprehensive data quality testing, real-time business intelligence, and production-grade monitoring with automated error handling. The platform processes sales, customer, and product data to generate actionable insights for revenue optimization, customer segmentation, and operational efficiency.",
+    category: "Data Engineering"
+  },
+  {
+    title: "F1 Racing Analytics Project",
+    description:
+      "Comprehensive Formula 1 racing data analytics platform built on Azure Databricks with medallion architecture for end-to-end data engineering and BI reporting.",
+    tags: ["Azure Databricks", "PySpark", "Delta Lake", "Azure", "SQL", "Power BI", "Data Engineering"],
+    imageUrl: f1analytics,
+    githubUrl: "https://github.com/idabaguspurwa/F1-Racing-Analytics",
+    detailedDescription: "A comprehensive Formula 1 racing data analytics platform demonstrating enterprise-level data engineering workflows on Azure Databricks. Implements medallion architecture (Bronze-Silver-Gold) for processing F1 racing data from the Ergast API. Features include multi-format data ingestion (CSV, JSON), Delta Lake for ACID transactions, incremental loading with merge operations, and comprehensive data transformations for race results, driver standings, and constructor analytics. The platform provides automated pipeline orchestration through Azure Databricks workflows, robust error handling, data quality validation, and culminates in interactive Power BI dashboards for business intelligence. Key analytics include dominant driver/team identification, championship standings analysis, and circuit-specific performance metrics, showcasing modern cloud-native data engineering practices.",
+    category: "Data Analytics"
   },
   {
     title: "Fake News Detection Paper using Machine Learning Technique",
@@ -141,7 +171,8 @@ export const projectsData = [
     tags: ["Machine Learning", "TF-IDF", "Bert", "GLOVE", "NLP"],
     imageUrl: fakenewsdetectionImg,
     githubUrl: "https://github.com/idabaguspurwa/fakeNewsDetection-ML",
-    detailedDescription: "This research evaluates fake news detection by comparing BERT, TF-IDF, and GloVe embeddings with various machine learning models. Through systematic analysis, the study identifies optimal combinations for detecting misinformation, revealing BERT's superior contextual understanding while highlighting efficiency trade-offs with traditional approaches. The findings contribute practical insights for developing more effective automated detection systems."
+    detailedDescription: "This research evaluates fake news detection by comparing BERT, TF-IDF, and GloVe embeddings with various machine learning models. Through systematic analysis, the study identifies optimal combinations for detecting misinformation, revealing BERT's superior contextual understanding while highlighting efficiency trade-offs with traditional approaches. The findings contribute practical insights for developing more effective automated detection systems.",
+    category: "Machine Learning"
   },
   {
     title: "MtGraphy Photography Website",
@@ -151,7 +182,28 @@ export const projectsData = [
     imageUrl: mtgraphy,
     githubUrl: "https://github.com/idabaguspurwa/mtgraphy",
     liveUrl: "https://mtgraphy-navy.vercel.app/",
-    detailedDescription: "MTgraphy demonstrates practical application of HCI concepts through a visually engaging platform for photography services. The project implements responsive design, accessibility features, and streamlined navigation to enhance user experience. Key elements include image-centric layouts, minimal cognitive load, and clear visual hierarchy. Created using modern frontend technologies, this academic project balances aesthetic appeal with functional usability to serve both photography enthusiasts and potential clients."
+    detailedDescription: "MTgraphy demonstrates practical application of HCI concepts through a visually engaging platform for photography services. The project implements responsive design, accessibility features, and streamlined navigation to enhance user experience. Key elements include image-centric layouts, minimal cognitive load, and clear visual hierarchy. Created using modern frontend technologies, this academic project balances aesthetic appeal with functional usability to serve both photography enthusiasts and potential clients.",
+    category: "Web Development"
+  },
+  {
+    title: "NYC Taxi Analytics Project",
+    description:
+      "NYC taxi analytics on Azure Synapse with medallion architecture for multi-format data processing and BI.",
+    tags: ["Azure Synapse", "Serverless SQL", "Apache Spark", "Azure Data Lake", "SQL", "Data Analytics"],
+    imageUrl: nyctaxi,
+    githubUrl: "https://github.com/idabaguspurwa/NYC-Taxi-Analytics",
+    detailedDescription: "A comprehensive data analytics solution for NYC taxi trip data demonstrating end-to-end data processing using Azure Synapse Analytics and modern cloud-based data engineering practices. Implements medallion architecture with bronze (raw data ingestion), silver (cleaned and validated data), and gold (business-ready aggregated data) layers. Features multi-format data processing including CSV, Parquet, JSON, and Delta Lake formats, comprehensive data quality management with rejection handling, automated ETL pipeline orchestration through Azure Data Factory, and advanced analytics including trip volume analysis by borough, payment method analysis, and geographic distribution insights. The solution provides serverless SQL pool for query processing, Apache Spark for data transformation, partitioned data storage for performance optimization, and business intelligence dashboards built on the gold layer data for actionable insights.",
+    category: "Data Engineering"
+  },
+  {
+    title: "Stock Market Data Pipeline",
+    description:
+      "Comprehensive stock market data pipeline using Apache Airflow, Spark, and MinIO for real-time stock price extraction and processing.",
+    tags: ["Apache Airflow", "Apache Spark", "MinIO", "Docker", "Python", "Data Engineering"],
+    imageUrl: stockmarket,
+    githubUrl: "https://github.com/idabaguspurwa/stock_market_data_pipeline",
+    detailedDescription: "A robust data pipeline that orchestrates stock market data workflows using Apache Airflow for scheduling, Apache Spark for data transformation, and MinIO for object storage. The system extracts NVDA stock price data from Yahoo Finance API, processes and transforms the data through Spark jobs, and stores both raw and processed data in scalable object storage. Features include automated daily pipeline execution, comprehensive error handling with retry mechanisms, real-time stock price extraction, and data format transformation from JSON to CSV. The containerized architecture ensures portability and scalability, while the Airflow UI provides comprehensive monitoring and management capabilities for the entire data workflow.",
+    category: "Data Engineering"
   },
   {
     title: "Vanilla Portfolio Website",
@@ -161,8 +213,20 @@ export const projectsData = [
     imageUrl: portfolioImg,
     githubUrl: "https://github.com/idabaguspurwa/vanilla-portfolio?tab=readme-ov-file",
     liveUrl: "https://vanilla-portfolio-mu.vercel.app/",
-    detailedDescription: "A minimalist portfolio website built with vanilla HTML, CSS, and JavaScript. Features responsive design, intuitive navigation, and optimized performance without frameworks. Includes downloadable CV functionality and social media integration while showcasing core web development skills through clean, efficient code and thoughtful user experience design."
+    detailedDescription: "A minimalist portfolio website built with vanilla HTML, CSS, and JavaScript. Features responsive design, intuitive navigation, and optimized performance without frameworks. Includes downloadable CV functionality and social media integration while showcasing core web development skills through clean, efficient code and thoughtful user experience design.",
+    category: "Web Development"
   }
+] as const;
+
+export const projectCategories = [
+  "All",
+  "Automation",
+  "Data Analytics",
+  "Data Engineering",
+  "Machine Learning",
+  "Mobile Development",
+  "UI/UX Design",
+  "Web Development"
 ] as const;
 
 export const skillsData = [
@@ -179,6 +243,22 @@ export const skillsData = [
   "Java",
   "C/C++",
   "SQL",
+  "GCP",
+  "BigQuery",
+  "Airflow",
+  "dbt",
+  "Terraform",
+  "Azure",
+  "Azure Databricks",
+  "Azure Synapse",
+  "PySpark",
+  "Delta Lake",
+  "Power BI",
+  "Data Engineering",
+  "Data Analytics",
+  "Tableau",
+  "Looker Studio",
+  "Git",
   "Critical Thinking",
   "Communication",
 ] as const;
