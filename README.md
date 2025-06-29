@@ -204,10 +204,9 @@ npm start
 ## 📧 **Contact**
 
 **Ida Bagus Gede Purwa Manik Adiputra**
-- 📧 Email: [Your Email]
-- 💼 LinkedIn: [Your LinkedIn Profile]
+- 📧 Email: [ida.adiputra@outlook.com](ida.adiputra@outlook.com)
+- 💼 LinkedIn: [https://www.linkedin.com/in/idabaguspurwa/](https://www.linkedin.com/in/idabaguspurwa/)
 - 🐙 GitHub: [https://github.com/idabaguspurwa](https://github.com/idabaguspurwa)
-- 🌐 Portfolio: [Your Portfolio URL]
 
 ## 📄 **License**
 
