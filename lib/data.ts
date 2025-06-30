@@ -15,6 +15,8 @@ import dataplatform from "@/public/dataplatform.png";
 import stockmarket from "@/public/stockmarket.png";
 import f1analytics from "@/public/f1analytics.png";
 import nyctaxi from "@/public/nyctaxi.png";
+import footballStreaming from "@/public/football-streaming.png";
+import reactporto from "@/public/reactporto.png";
 
 export const links = [
   {
@@ -186,13 +188,23 @@ export const projectsData = [
     category: "Web Development"
   },
   {
+    title: "Real-Time Football Match Data Streaming Pipeline",
+    description:
+      "Stream live match events using Kafka → Spark Streaming → BigQuery for instant analytics and insights",
+    tags: ["GCP", "Apache Kafka", "Spark Streaming", "BigQuery", "Terraform", "Docker", "Airflow", "Avro", "Looker Studio"],
+    imageUrl: footballStreaming,
+    githubUrl: "https://github.com/idabaguspurwa/Football_Fixtures_Match_Tracker",
+    detailedDescription: "A comprehensive real-time data engineering pipeline built on Google Cloud Platform that captures live football match data from API-Football service and processes it for real-time analytics. The system implements a complete streaming architecture using Apache Kafka for message queuing with Avro schema enforcement, PySpark Streaming on Cloud Dataproc for real-time data processing, and BigQuery as the data warehouse. Key features include Infrastructure as Code deployment with Terraform, containerized data producer with Docker running on GCE, Apache Airflow orchestration on Cloud Composer for job scheduling and monitoring, real-time event processing (goals, cards, substitutions), schema evolution management with Avro, and live visualization through Looker Studio dashboards. The pipeline demonstrates modern streaming data engineering practices including fault tolerance, scalability, and automated deployment, processing live match events with sub-minute latency from ingestion to visualization.",
+    category: "Data Engineering"
+  },
+  {
     title: "NYC Taxi Analytics Project",
     description:
       "NYC taxi analytics on Azure Synapse with medallion architecture for multi-format data processing and BI.",
     tags: ["Azure Synapse", "Serverless SQL", "Apache Spark", "Azure Data Lake", "SQL", "Data Analytics"],
     imageUrl: nyctaxi,
     githubUrl: "https://github.com/idabaguspurwa/NYC-Taxi-Analytics",
-    detailedDescription: "A comprehensive data analytics solution for NYC taxi trip data demonstrating end-to-end data processing using Azure Synapse Analytics and modern cloud-based data engineering practices. Implements medallion architecture with bronze (raw data ingestion), silver (cleaned and validated data), and gold (business-ready aggregated data) layers. Features multi-format data processing including CSV, Parquet, JSON, and Delta Lake formats, comprehensive data quality management with rejection handling, automated ETL pipeline orchestration through Azure Data Factory, and advanced analytics including trip volume analysis by borough, payment method analysis, and geographic distribution insights. The solution provides serverless SQL pool for query processing, Apache Spark for data transformation, partitioned data storage for performance optimization, and business intelligence dashboards built on the gold layer data for actionable insights.",
+    detailedDescription: "End-to-end data solution using Azure Synapse Analytics with medallion architecture (bronze/silver/gold layers). Processes multi-format data (CSV, Parquet, JSON, Delta Lake) with automated ETL pipelines via Azure Data Factory. Features include data quality management, Spark transformations, serverless SQL queries, and BI dashboards for trip volume, payment, and geographic insights.",
     category: "Data Engineering"
   },
   {
@@ -204,6 +216,17 @@ export const projectsData = [
     githubUrl: "https://github.com/idabaguspurwa/stock_market_data_pipeline",
     detailedDescription: "A robust data pipeline that orchestrates stock market data workflows using Apache Airflow for scheduling, Apache Spark for data transformation, and MinIO for object storage. The system extracts NVDA stock price data from Yahoo Finance API, processes and transforms the data through Spark jobs, and stores both raw and processed data in scalable object storage. Features include automated daily pipeline execution, comprehensive error handling with retry mechanisms, real-time stock price extraction, and data format transformation from JSON to CSV. The containerized architecture ensures portability and scalability, while the Airflow UI provides comprehensive monitoring and management capabilities for the entire data workflow.",
     category: "Data Engineering"
+  },
+  {
+    title: "Professional Portfolio Website",
+    description:
+      "Modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS showcasing data engineering and analytics expertise.",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "React", "Framer Motion", "Vercel"],
+    imageUrl: reactporto,
+    githubUrl: "https://github.com/idabaguspurwa/portfolio-website",
+    liveUrl: "https://idabaguspurwa.vercel.app/",
+    detailedDescription: "A comprehensive portfolio website built with modern web technologies to showcase expertise in Data Engineering, Data Analytics, and Machine Learning. Features include dynamic project filtering by categories, smooth animations with Framer Motion, responsive design optimized for all devices, dark/light theme toggle, interactive contact form with email integration, and professional sections for projects, experience, skills, and publications. The site implements best practices including TypeScript for type safety, Tailwind CSS for efficient styling, SEO optimization, and deployment on Vercel for optimal performance. Demonstrates proficiency in modern frontend development while serving as a professional showcase for data engineering capabilities.",
+    category: "Web Development"
   },
   {
     title: "Vanilla Portfolio Website",
@@ -246,6 +269,8 @@ export const skillsData = [
   "GCP",
   "BigQuery",
   "Airflow",
+  "Apache Kafka",
+  "Avro",
   "dbt",
   "Terraform",
   "Azure",

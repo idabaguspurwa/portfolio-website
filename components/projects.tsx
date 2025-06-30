@@ -10,9 +10,10 @@ export default function Projects() {
   const { ref } = useSectionInView("Projects", 0.2);
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const filteredProjects = selectedCategory === "All" 
+  const filteredProjects = [...(selectedCategory === "All" 
     ? projectsData 
-    : projectsData.filter(project => project.category === selectedCategory);
+    : projectsData.filter(project => project.category === selectedCategory))]
+    .sort((a, b) => a.title.localeCompare(b.title));
 
   return (
     <section ref={ref} id="projects" className="scroll-mt-28 mb-28">
