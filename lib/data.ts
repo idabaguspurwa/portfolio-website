@@ -194,6 +194,7 @@ export const projectsData = [
     tags: ["GCP", "Apache Kafka", "Spark Streaming", "BigQuery", "Terraform", "Docker", "Airflow", "Avro", "Looker Studio"],
     imageUrl: footballStreaming,
     githubUrl: "https://github.com/idabaguspurwa/Football_Fixtures_Match_Tracker",
+    liveUrl: "https://lookerstudio.google.com/reporting/6cef80f3-5906-46e0-b23d-94f1494c8979",
     detailedDescription: "A comprehensive real-time data engineering pipeline built on Google Cloud Platform that captures live football match data from API-Football service and processes it for real-time analytics. The system implements a complete streaming architecture using Apache Kafka for message queuing with Avro schema enforcement, PySpark Streaming on Cloud Dataproc for real-time data processing, and BigQuery as the data warehouse. Key features include Infrastructure as Code deployment with Terraform, containerized data producer with Docker running on GCE, Apache Airflow orchestration on Cloud Composer for job scheduling and monitoring, real-time event processing (goals, cards, substitutions), schema evolution management with Avro, and live visualization through Looker Studio dashboards. The pipeline demonstrates modern streaming data engineering practices including fault tolerance, scalability, and automated deployment, processing live match events with sub-minute latency from ingestion to visualization.",
     category: "Data Engineering"
   },
