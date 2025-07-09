@@ -180,11 +180,11 @@ export const projectsData = [
   {
     title: "Basketball Player Face Detection & Recognition",
     description:
-      "Computer vision system for detecting and recognizing basketball players using OpenCV and LBPH face recognition with advanced data augmentation techniques.",
+      "Basketball player recognition using OpenCV, LBPH, and advanced data augmentation",
     tags: ["OpenCV", "Computer Vision", "Machine Learning", "Python", "LBPH", "Face Detection"],
     imageUrl: basketballDetection,
     githubUrl: "https://github.com/idabaguspurwa/cv_basketball_player_detection",
-    detailedDescription: "A comprehensive computer vision project implementing face detection and recognition specifically designed for basketball players. The system utilizes OpenCV's Haar Cascade classifier for robust face detection and LBPH (Local Binary Patterns Histograms) algorithm for player identification. Key features include advanced data augmentation techniques (rotation, flipping, scaling, translation) to enhance training data quality, interactive command-line interface for training and prediction workflows, model persistence for reuse with accuracy calculation and confidence scoring. The system processes training images with histogram equalization and face region extraction, implements train-test split (80/20) for model validation, and provides visual output with bounding boxes, player name identification, and confidence percentages. Technical implementation includes automatic dataset downloading via Google Drive integration, standardized 200x200 pixel face image processing, and comprehensive error handling for robust performance. The project demonstrates practical application of computer vision techniques in sports analytics with scalable architecture for player identification systems.",
+    detailedDescription: "This computer vision system detects and recognizes basketball players using OpenCV's Haar Cascade and LBPH algorithms. To improve accuracy, the model is trained with advanced data augmentation and validated with an 80/20 train-test split. The project features an interactive CLI, automatic dataset downloading from Google Drive, and provides real-time visual output with bounding boxes, player names, and confidence scores, demonstrating a practical application of CV in sports analytics",
     category: "Computer Vision"
   },
   {
