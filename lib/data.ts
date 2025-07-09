@@ -17,6 +17,7 @@ import f1analytics from "@/public/f1analytics.png";
 import nyctaxi from "@/public/nyctaxi.png";
 import footballStreaming from "@/public/football-streaming.png";
 import reactporto from "@/public/reactporto.png";
+import basketballDetection from "@/public/basketball-detection.png";
 
 export const links = [
   {
@@ -177,6 +178,16 @@ export const projectsData = [
     category: "Machine Learning"
   },
   {
+    title: "Basketball Player Face Detection & Recognition",
+    description:
+      "Computer vision system for detecting and recognizing basketball players using OpenCV and LBPH face recognition with advanced data augmentation techniques.",
+    tags: ["OpenCV", "Computer Vision", "Machine Learning", "Python", "LBPH", "Face Detection"],
+    imageUrl: basketballDetection,
+    githubUrl: "https://github.com/idabaguspurwa/cv_basketball_player_detection",
+    detailedDescription: "A comprehensive computer vision project implementing face detection and recognition specifically designed for basketball players. The system utilizes OpenCV's Haar Cascade classifier for robust face detection and LBPH (Local Binary Patterns Histograms) algorithm for player identification. Key features include advanced data augmentation techniques (rotation, flipping, scaling, translation) to enhance training data quality, interactive command-line interface for training and prediction workflows, model persistence for reuse with accuracy calculation and confidence scoring. The system processes training images with histogram equalization and face region extraction, implements train-test split (80/20) for model validation, and provides visual output with bounding boxes, player name identification, and confidence percentages. Technical implementation includes automatic dataset downloading via Google Drive integration, standardized 200x200 pixel face image processing, and comprehensive error handling for robust performance. The project demonstrates practical application of computer vision techniques in sports analytics with scalable architecture for player identification systems.",
+    category: "Computer Vision"
+  },
+  {
     title: "MtGraphy Photography Website",
     description:
       "A photography platform built as a college HCI project, focusing on user-centered design and intuitive navigation to showcase professional photography site",
@@ -195,7 +206,7 @@ export const projectsData = [
     imageUrl: footballStreaming,
     githubUrl: "https://github.com/idabaguspurwa/Football_Fixtures_Match_Tracker",
     liveUrl: "https://lookerstudio.google.com/reporting/6cef80f3-5906-46e0-b23d-94f1494c8979",
-    detailedDescription: "A comprehensive real-time data engineering pipeline built on Google Cloud Platform that captures live football match data from API-Football service and processes it for real-time analytics. The system implements a complete streaming architecture using Apache Kafka for message queuing with Avro schema enforcement, PySpark Streaming on Cloud Dataproc for real-time data processing, and BigQuery as the data warehouse. Key features include Infrastructure as Code deployment with Terraform, containerized data producer with Docker running on GCE, Apache Airflow orchestration on Cloud Composer for job scheduling and monitoring, real-time event processing (goals, cards, substitutions), schema evolution management with Avro, and live visualization through Looker Studio dashboards. The pipeline demonstrates modern streaming data engineering practices including fault tolerance, scalability, and automated deployment, processing live match events with sub-minute latency from ingestion to visualization.",
+    detailedDescription: "This real time streaming pipeline, built on Google Cloud Platform, processes live football match data from an external API. It leverages a modern data stack: Apache Kafka for ingestion, PySpark Streaming on Dataproc for processing, and BigQuery as the data warehouse. The pipeline features automated deployment with Terraform and Docker, orchestration via Airflow, schema enforcement with Avro, and live visualization in Looker Studio, achieving sub-minute latency from event to insight",
     category: "Data Engineering"
   },
   {
@@ -245,6 +256,7 @@ export const projectsData = [
 export const projectCategories = [
   "All",
   "Automation",
+  "Computer Vision",
   "Data Analytics",
   "Data Engineering",
   "Machine Learning",

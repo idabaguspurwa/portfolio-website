@@ -11,45 +11,67 @@ export default function About() {
   return (
     <motion.section
       ref={ref}
-      className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
+      className="mb-28 max-w-[50rem] text-left leading-7 sm:mb-40 scroll-mt-28"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
       id="about"
     >
       <SectionHeading>About me</SectionHeading>
-      <p className="mb-3">
-        As a{" "}
-        <span className="font-medium">Data Engineer and Analytics Professional</span> with
-        expertise in{" "}
-        <span className="font-medium">cloud data platforms</span>, I specialize in
-        building enterprise-grade data solutions that transform raw data into actionable business insights. With hands-on experience in{" "}
-        <span className="italic">GCP, Azure, Apache Airflow, and dbt</span>,
-        I design and implement{" "}
-        <span className="underline">end-to-end data pipelines</span> following modern data engineering best practices.
-      </p>
       
-      <p className="mb-3">
-        My expertise spans{" "}
-        <span className="font-medium">Data Engineering, Business Intelligence, and Machine Learning</span>.
-        I've successfully delivered{" "}
-        <span className="italic">real-time analytics platforms, automated ETL workflows, and ML-powered solutions</span>{" "}
-        using technologies like{" "}
-        <span className="font-medium">BigQuery, Databricks, Power BI, and Apache Spark</span>.
-        From medallion architecture implementations to production-grade data quality frameworks,
-        I bring both technical depth and business acumen to every project.
-      </p>
-      
-      <p>
-        Currently pursuing{" "}
-        <span className="font-medium">Computer Science with Intelligent Systems specialization</span>,
-        I combine academic rigor with practical industry experience from my{" "}
-        <span className="underline">Business Analyst internship at PT Bank Central Asia</span>.
-        I'm passionate about{" "}
-        <span className="font-medium">continuous learning</span> and staying at the forefront of
-        data engineering innovations, always seeking to deliver scalable, reliable solutions
-        that drive business value.
-      </p>
+      <div className="space-y-6 text-gray-700 dark:text-gray-300">
+        <p className="text-lg leading-relaxed">
+          I am a{" "}
+          <span className="font-semibold text-gray-900 dark:text-white">Data Engineer</span>{" "}
+          who builds scalable, enterprise grade solutions on cloud platforms, turning raw data into actionable insights.
+        </p>
+        
+        <p className="leading-relaxed">
+          Currently pursuing a{" "}
+          <span className="font-medium text-gray-900 dark:text-white">Computer Science degree (Intelligent Systems)</span>, 
+          I combine academic rigor with industry experience from my internship at{" "}
+          <span className="font-medium text-gray-900 dark:text-white">PT Bank Central Asia</span>. 
+          I am passionate about building reliable data products that drive business value.
+        </p>
+        
+        <div className="mt-8">
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+            Core Competencies:
+          </h3>
+          
+          <div className="space-y-4">
+            <div className="bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg">
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+                Data Pipelining & Orchestration:
+              </h4>
+              <p className="text-sm leading-relaxed">
+                Designing and implementing end-to-end ETL/ELT workflows using{" "}
+                <span className="font-medium">Apache Airflow, dbt, GCP, and Azure</span>.
+              </p>
+            </div>
+            
+            <div className="bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg">
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+                Data Warehousing & Analytics:
+              </h4>
+              <p className="text-sm leading-relaxed">
+                Building real time analytics platforms and BI solutions with{" "}
+                <span className="font-medium">BigQuery, Databricks, Power BI, Tableau and Looker Studio</span>.
+              </p>
+            </div>
+            
+            <div className="bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg">
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+                Advanced Data Solutions:
+              </h4>
+              <p className="text-sm leading-relaxed">
+                Developing ML powered features and implementing modern architectural patterns like{" "}
+                <span className="font-medium">Medallion Architecture</span> and production-grade data quality frameworks.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </motion.section>
   );
 }
